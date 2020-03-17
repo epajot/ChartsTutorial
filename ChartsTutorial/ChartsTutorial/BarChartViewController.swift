@@ -15,13 +15,35 @@ class BarChartViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    barChartView.animate(yAxisDuration: 2.0)
+    barChartView.animate(xAxisDuration: 0.0, yAxisDuration: 0.0)
     barChartView.pinchZoomEnabled = false
     barChartView.drawBarShadowEnabled = false
     barChartView.drawBordersEnabled = false
     barChartView.doubleTapToZoomEnabled = false
-    barChartView.drawGridBackgroundEnabled = true
+    barChartView.drawGridBackgroundEnabled = false
+    barChartView.drawValueAboveBarEnabled = false
+    barChartView.drawMarkers = false
     barChartView.chartDescription?.text = "Bar Chart View"
+    barChartView.chartDescription?.textColor = UIColor.red
+    barChartView.backgroundColor = UIColor.clear
+    barChartView.autoresizesSubviews = false
+    barChartView.gridBackgroundColor = UIColor.clear
+    barChartView.legend.textColor = UIColor.red
+    barChartView.xAxis.axisLineColor = UIColor.red
+    barChartView.xAxis.labelTextColor = UIColor.red
+    barChartView.xAxis.labelPosition = XAxis.LabelPosition.bottom
+    barChartView.xAxis.drawLabelsEnabled = true
+    barChartView.leftAxis.axisLineColor = UIColor.red
+    barChartView.leftAxis.labelTextColor = UIColor.red
+    barChartView.leftAxis.drawGridLinesEnabled = true // by Default
+    barChartView.leftAxis.drawAxisLineEnabled = true // by Default
+    barChartView.leftAxis.drawLabelsEnabled = true // by Default
+    barChartView.rightAxis.axisLineColor = UIColor.red
+    barChartView.rightAxis.labelTextColor = UIColor.red
+    barChartView.rightAxis.drawGridLinesEnabled = false
+    barChartView.rightAxis.drawAxisLineEnabled = true
+    barChartView.rightAxis.drawLabelsEnabled = true
+
     
     setChart(dataPoints: players, values: goals.map { Double($0) })
   }

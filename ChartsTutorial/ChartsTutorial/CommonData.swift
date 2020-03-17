@@ -8,5 +8,5 @@
 
 import Foundation
 
-let players = ["Ozil", "Ramsey", "Laca", "Auba", "Xhaka", "Torreira"]
-let goals = [6, 8, 26, 30, 8, 10]
+let players = ["􀆅","􀆄","􀊯","􀓗"]
+let goals = [6, 8, 26, 40]
